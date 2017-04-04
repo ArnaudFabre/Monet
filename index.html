@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang='en' ng-app='monetApp'>
+  <head>
+      <meta charset='utf-8'>
+      <title>monetApp</title>
+      <link rel='stylesheet' href='assets/style.css'>
+	  <!--Import Google Icon Font-->
+       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	   <!--Import materialize.css-->
+	   <link type="text/css" rel="stylesheet" href="bower_components/materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+	   <!--Let browser know website is optimized for mobile-->
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <script src='bower_components/angular/angular.js'></script>
+      <script src='app.js'></script>
+  </head>
+  <body ng-controller='monetCtrl'>
+	  <div class="container">
+		  <div class="card-panel blue lighten-1 hoverable">
+		  Monet, Monet, Monet, always Monet.
+	  </div>
+
+	  <div>
+	  <label for="ba">Brut Annuel</label>
+	  <input step="1000" ng-change="computeFrom('ba')" name="ba" type="number" ng-model="brut_annuel"/>
+	  </div>
+	  <div>
+	  <label for="na">Net Annuel</label>
+	  <input ng-change="computeFrom('na')" name="na" type="number" ng-model="net_annuel"/>
+	  </div>
+	  <div>
+	  <label for="bm">Brut Mensuel</label>
+	  <input ng-change="computeFrom('bm')" name="bm" type="number" ng-model="brut_mensuel"/>
+	  </div>
+	  <div>
+	  <label for="nm">Net Mensuel</label>
+	  <input ng-change="computeFrom('nm')" name="nm" type="number" ng-model="net_mensuel"/>
+	  </div>
+	  <div class="card-panel hoverable  teal lighten-2">
+		  Vous êtes plus riche que {{riche}}% des français.
+	  </div>
+	  </div>
+  </body>
+</html>
